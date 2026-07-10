@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="py-8 px-6 border-t border-border">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-text-muted text-sm">
-          © {new Date().getFullYear()} John Doe. Built with React & TailwindCSS.
+          © {new Date().getFullYear()} Sadam Husein. Built with React & TailwindCSS.
         </p>
 
         <button

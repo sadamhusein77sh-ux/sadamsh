@@ -99,7 +99,7 @@ export function AboutSection() {
           </h2>
 
           <p className="text-text-muted text-lg leading-relaxed">
-            I'm a passionate Senior Frontend Engineer with over 6 years of experience
+            I'm a passionate Senior Frontend Engineer with over 5+ years of experience
             building modern web applications. I specialize in creating intuitive,
             performant, and accessible user interfaces using React and Angular.
           </p>

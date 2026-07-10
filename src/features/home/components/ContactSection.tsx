@@ -63,7 +63,7 @@ export function ContactSection() {
                   className="flex items-center gap-3 text-text-muted hover:text-accent transition-colors"
                 >
                   <Mail size={20} />
-                  john.doe@email.com
+                  sadamhusein77.sh@gmail.com
                 </a>
               </div>
             </ScrollReveal>

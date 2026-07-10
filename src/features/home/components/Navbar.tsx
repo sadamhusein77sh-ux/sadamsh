@@ -44,7 +44,7 @@ export function Navbar() {
             }}
             className="text-xl font-bold text-text-primary hover:text-accent transition-colors"
           >
-            JD
+            SH
           </a>
 
           {/* Desktop Nav */}
