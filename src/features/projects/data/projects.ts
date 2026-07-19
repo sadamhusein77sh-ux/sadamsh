@@ -2,6 +2,8 @@ import type { Project, Experience } from '@/shared/types'
 import lxspaceImg from '@/assets/images/lxspace.png';
 import irelloImg from '@/assets/images/irello.png';
 import liburinImg from '@/assets/images/liburin.png';
+import keeprImg from '@/assets/images/keepr.png';
+
 
 
 export const projects: Project[] = [
@@ -25,18 +27,18 @@ export const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'My Keep Notes',
-    slug: 'my-keep-notes',
+    title: 'Keepr Notes',
+    slug: 'keepr-notes',
     description: 'Example notes with temporary storage',
     longDescription:
       'A notes application with temporary local storage, allowing users to quickly capture and organize thoughts with a clean, minimal interface.',
-    thumbnail: 'https://my-keep-notes.netlify.app/og.png',
+    thumbnail: keeprImg,
     images: [],
     tags: ['React', 'Tailwindcss', 'TypeScript'],
     category: 'react',
     featured: false,
     links: {
-      live: 'https://my-keep-notes.netlify.app/',
+      live: 'https://keepr-ruddy.vercel.app/',
     },
     date: '2022',
     year: 2022,
