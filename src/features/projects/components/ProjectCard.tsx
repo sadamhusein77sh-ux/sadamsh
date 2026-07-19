@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import { motion } from 'framer-motion'
 import { ExternalLink, Globe, X } from 'lucide-react'
 import { cn } from '@/shared/lib/cn'
@@ -65,18 +66,19 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </motion.article>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isModalOpen && createPortal(
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80"
+          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/80"
           onClick={() => setIsModalOpen(false)}
         >
           <motion.div
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-surface border border-border rounded-2xl"
             onClick={(e) => e.stopPropagation()}
           >
@@ -152,7 +154,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
               </div>
             </div>
           </motion.div>
-        </motion.div>
+        </motion.div>,
+        document.body
       )}
     </>
   )

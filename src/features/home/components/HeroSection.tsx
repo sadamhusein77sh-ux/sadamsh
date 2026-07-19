@@ -389,7 +389,7 @@ export function HeroSection() {
           className="text-xl md:text-2xl text-text-muted mb-4"
           style={{ opacity: 0 }}
         >
-          Frontend Engineer
+          Front-End Developer
         </p>
 
         <p
@@ -397,9 +397,10 @@ export function HeroSection() {
           className="text-base md:text-lg text-text-muted max-w-2xl mx-auto mb-10"
           style={{ opacity: 0 }}
         >
-          Crafting performant, accessible, and visually stunning web experiences
-          with React and Angular. 5+ years of transforming complex problems into
-          elegant solutions.
+          A dedicated Front-End Developer with over 5 years of hands-on experience
+          crafting dynamic and responsive user interfaces. Specializing in the React.js
+          ecosystem — building efficient, scalable, and visually appealing web
+          applications with seamless user experiences.
         </p>
 
         {/* CTA buttons */}
@@ -410,10 +411,6 @@ export function HeroSection() {
         >
           <Button size="lg" onClick={scrollToProjects}>
             View Projects
-          </Button>
-          <Button variant="secondary" size="lg">
-            <Download size={18} className="mr-2" />
-            Download CV
           </Button>
         </div>
 
@@ -430,7 +427,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <style>{`
+      {/* <style>{`
         .scroll-indicator {
           animation: bounce 1.5s ease-in-out infinite;
         }
@@ -438,7 +435,7 @@ export function HeroSection() {
           0%, 100% { transform: translateY(0) translateX(-50%); }
           50% { transform: translateY(8px) translateX(-50%); }
         }
-      `}</style>
+      `}</style> */}
     </section>
   )
 }

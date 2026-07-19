@@ -71,7 +71,7 @@ export function Navbar() {
             size="sm"
             className="hidden md:inline-flex"
             onClick={() =>
-              window.open('mailto:john.doe@email.com', '_blank')
+              window.open('mailto:sadamhusein77.sh@gmail.com', '_blank')
             }
           >
             Get in Touch

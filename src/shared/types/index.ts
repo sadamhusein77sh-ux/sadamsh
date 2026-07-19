@@ -15,15 +15,18 @@ export interface Project {
     caseStudy?: string
   }
   date: string
+  year?: number
+  image?: string
 }
 
 export interface Experience {
   id: string
   company: string
-  role: string
-  duration: string
+  title: string
+  period: string
   description: string
-  technologies: string[]
+  icon?: string
+  color?: string
 }
 
 export interface SocialLink {

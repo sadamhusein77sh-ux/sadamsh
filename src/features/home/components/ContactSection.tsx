@@ -5,10 +5,13 @@ import { Section } from '@/shared/components/layout/Section'
 import { ScrollReveal } from '@/shared/components/animation/ScrollReveal'
 import { Button } from '@/shared/components/ui/Button'
 import { socialLinks } from '@/constants/nav'
+import linkedinIcon from '@/assets/images/linked.png'
+import githubIcon from '@/assets/images/github.png'
 
-const iconMap: Record<string, React.ElementType> = {
-  github: Globe,
-  linkedin: Globe,
+type IconValue = string | React.ElementType
+const iconMap: Record<string, IconValue> = {
+  github: githubIcon,
+  linkedin: linkedinIcon,
   twitter: Globe,
   mail: Mail,
 }
@@ -26,15 +29,30 @@ export function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        }),
+      })
 
-    setIsSubmitting(false)
-    setSubmitted(true)
-    setFormState({ name: '', email: '', message: '' })
-
-    // Reset success message after 3s
-    setTimeout(() => setSubmitted(false), 3000)
+      if (response.ok) {
+        setSubmitted(true)
+        setFormState({ name: '', email: '', message: '' })
+        setTimeout(() => setSubmitted(false), 3000)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -59,7 +77,7 @@ export function ContactSection() {
             <ScrollReveal delay={0.2}>
               <div className="space-y-4 mb-8">
                 <a
-                  href="mailto:john.doe@email.com"
+                  href="mailto:sadamhusein77.sh@gmail.com"
                   className="flex items-center gap-3 text-text-muted hover:text-accent transition-colors"
                 >
                   <Mail size={20} />
@@ -81,7 +99,13 @@ export function ContactSection() {
                       className="p-3 bg-surface border border-border rounded-lg text-text-muted hover:text-accent hover:border-accent/50 transition-all"
                       aria-label={link.name}
                     >
-                      <Icon size={20} />
+                      {typeof Icon === 'string' ? (
+                        // image import (path)
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={Icon} alt={link.name} className="w-5 h-5" />
+                      ) : (
+                        <Icon size={20} />
+                      )}
                     </a>
                   )
                 })}

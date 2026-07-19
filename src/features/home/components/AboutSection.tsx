@@ -99,22 +99,21 @@ export function AboutSection() {
           </h2>
 
           <p className="text-text-muted text-lg leading-relaxed">
-            I'm a passionate Senior Frontend Engineer with over 5+ years of experience
-            building modern web applications. I specialize in creating intuitive,
-            performant, and accessible user interfaces using React and Angular.
+            I'm a dedicated Front-End Developer with over 5 years of hands-on experience
+            crafting dynamic and responsive user interfaces. I specialize in building
+            intuitive, performant, and accessible web applications using React and Angular.
           </p>
 
           <p className="text-text-muted text-lg leading-relaxed">
-            My journey started with vanilla JavaScript, evolved through jQuery, and
-            matured with modern frameworks. Today, I focus on building scalable
-            component architectures, implementing smooth animations, and optimizing
-            for Core Web Vitals.
+            My journey began in accounting and banking before transitioning into tech.
+            Today, I focus on converting Figma designs into pixel-perfect, responsive
+            applications, with a particular passion for healthcare and edtech products.
           </p>
 
           <p className="text-text-muted text-lg leading-relaxed">
-            When I'm not coding, you'll find me contributing to open-source projects,
-            writing technical articles, or exploring new web technologies. I believe
-            in continuous learning and sharing knowledge with the community.
+            When I'm not coding, I enjoy exploring new web technologies, contributing
+            to open-source projects, and continuously improving my skills. I believe
+            in clean, maintainable code and seamless user experiences.
           </p>
 
           <Button

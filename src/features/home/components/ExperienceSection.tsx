@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion'
 import { Section } from '@/shared/components/layout/Section'
 import { ScrollReveal } from '@/shared/components/animation/ScrollReveal'
-import { Badge } from '@/shared/components/ui/Badge'
 import { experiences } from '@/features/projects/data/projects'
 
 export function ExperienceSection() {
@@ -45,24 +44,16 @@ export function ExperienceSection() {
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div>
                         <h3 className="text-xl font-semibold text-text-primary">
-                          {exp.role}
+                          {exp.title}
                         </h3>
                         <p className="text-accent font-medium">{exp.company}</p>
                       </div>
                       <span className="text-sm text-text-muted whitespace-nowrap">
-                        {exp.duration}
+                        {exp.period}
                       </span>
                     </div>
 
-                    <p className="text-text-muted mb-4">{exp.description}</p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <Badge key={tech} variant="default" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
+                    <p className="text-text-muted">{exp.description}</p>
                   </div>
                 </div>
 
